@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Youtube, Star } from "lucide-react";
+import { Instagram, Star } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -24,7 +24,7 @@ function Stars() {
 export default function Footer() {
   return (
     <footer className="bg-river text-cream">
-      <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-20">
+      <div className="max-w-[1200px] mx-auto px-6 py-10 md:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Image
@@ -56,16 +56,15 @@ export default function Footer() {
             <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4">
               Quick Links
             </h4>
-            <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
               {quickLinks.map((link) => (
-                <p key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-warm-white/80 text-sm hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </p>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-warm-white/80 text-sm hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -83,14 +82,6 @@ export default function Footer() {
                 className="text-warm-white/80 hover:text-white transition-colors"
               >
                 <Instagram size={22} />
-              </a>
-              <a
-                href="#" /* PLACEHOLDER */
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-warm-white/80 hover:text-white transition-colors"
-              >
-                <Youtube size={22} />
               </a>
             </div>
           </div>
