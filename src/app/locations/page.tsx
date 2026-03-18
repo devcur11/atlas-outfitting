@@ -190,50 +190,99 @@ const cities: CityData[] = [
 
 const lotgAccordionItems = [
   {
-    title: "History",
+    title: "The Location",
     content: (
-      <p>
-        Lewis &amp; Clark named Gates of the Mountains on July 19, 1805, as they traveled
-        up the Missouri River through the limestone canyon.
-      </p>
+      <div className="space-y-3">
+        <p>
+          This spectacular 3-mile section of the Missouri River sits just 30 minutes
+          north of Helena. A tailwater flowing through a mountainous limestone canyon
+          within the Gates of the Mountains Wilderness, out of Hauser Dam and into
+          Upper Holter Reservoir.
+        </p>
+        <p>
+          Lewis &amp; Clark rowed through this same stretch on July 19, 1805 and named
+          it &ldquo;The Gates of the Mountains.&rdquo; The history, scenery, and the
+          sheer feeling of being in this canyon make the trip worthwhile before you
+          even make a cast.
+        </p>
+      </div>
     ),
   },
   {
-    title: "Access",
+    title: "Access & Why Jet Boat",
     content: (
-      <p>
-        Jet boat across Upper Holter Reservoir or a long hike through Helena National
-        Forest. Commercial boat access is the only practical way to fish this stretch.
-      </p>
-    ),
-  },
-  {
-    title: "Guide Requirements",
-    content: (
-      <p>
-        USCG Captain&apos;s license required. Grandfathered L1 commercial permit — only
-        approximately 50 statewide.
-      </p>
+      <div className="space-y-3">
+        <p>
+          There are two ways in: a long hike through Helena National Forest, or jet
+          boat across Upper Holter Reservoir into the canyon. The jet boat is the only
+          practical way to fish this water — one of the few places in the lower 48
+          where jet boat access is required for trout fishing.
+        </p>
+        <p>
+          The boats are purpose-built for fly fishing — laid out like a drift boat with
+          a jet outboard mounted high to clear rocks. The motor lets you lap runs where
+          you find feeding trout, fish a half day without timing commitments, and get
+          off the water fast if weather turns. It&apos;s an Alaskan-style experience in
+          Montana.
+        </p>
+      </div>
     ),
   },
   {
     title: "The Fish",
     content: (
-      <p>
-        Average 20 inches. Fish in the 24–30 inch range are not uncommon. Eagle Lake
-        species rainbows and browns. Primarily nymphing and streamer, with occasional
-        dry fly opportunities.
-      </p>
+      <div className="space-y-3">
+        <p>
+          The section is named for the sheer size of the trout. Eagle Lake species
+          rainbows and browns average 20 inches with serious mass — fish in the
+          24–30 inch range are not uncommon.
+        </p>
+        <p>
+          These trout primarily reside in Upper Holter Reservoir where weed beds
+          provide a massive food source. They move upriver to spawn or find cooler
+          water, concentrating in the shallows where they become catchable. In recent
+          years, trout have started holding in the river section full-time, extending
+          the fishable season well into late fall. Primarily nymphing and streamer,
+          with occasional dry fly opportunities.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "An Elite Group of Guides",
+    content: (
+      <div className="space-y-3">
+        <p>
+          Only approximately 50 grandfathered L1 commercial permits exist statewide.
+          Guides must also hold a USCG Captain&apos;s license to operate the jet boats
+          required for access. Between the permit, the captain&apos;s license, and
+          maintaining the complex jet boat impeller system, the commitment far exceeds
+          that of a typical fishing guide.
+        </p>
+        <p>
+          When you book a Land of the Giants guide, you&apos;re getting someone who has
+          fished this section the longest — they had to have been on this water long
+          enough to be grandfathered into the permit itself. This small, elite group
+          specializes in this specific stretch and has seen it all.
+        </p>
+      </div>
     ),
   },
   {
     title: "Season & Booking",
     content: (
-      <p>
-        March through November. Plan early — anticipate a year-long wait minimum.
-        Last-minute openings do occur. Meeting point: Gates of the Mountains Marina,
-        3131 Gates of the Mountains Rd, Helena MT 59601.
-      </p>
+      <div className="space-y-3">
+        <p>
+          The boat ramp opens early March and the season runs through November. This
+          section is only growing in popularity with a limited selection of guides —
+          plan early and anticipate a year-long wait at minimum.
+        </p>
+        <p>
+          Last-minute openings do occur, so don&apos;t hesitate to reach out if
+          you&apos;re in the area. Meeting point: Gates of the Mountains Marina,
+          3131 Gates of the Mountains Rd, Helena MT 59601.
+        </p>
+      </div>
     ),
   },
 ];
@@ -337,15 +386,17 @@ export default function LocationsPage() {
                   <h3 className="font-serif font-bold text-2xl mb-3">
                     Land of the Giants — Our Signature Experience
                   </h3>
-                  <p className="text-cream/80 font-sans leading-relaxed mb-4">
-                    Trophy rainbow and brown trout averaging 20 inches in a limestone
-                    canyon accessible only by jet boat. One of only 50 grandfathered
-                    commercial access permits in the state.
+                  <p className="text-cream/80 font-sans leading-relaxed mb-2">
+                    A destination fly fishing experience unlike anything else in Montana.
+                    Trophy trout averaging 20 inches in a limestone canyon accessible only
+                    by jet boat — one of the few places in the lower 48 that requires it.
+                    Only approximately 50 guides in the entire state hold the grandfathered
+                    commercial permit to fish this water.
                   </p>
                   <p className="text-copper-light font-sans font-semibold mb-6">
                     $850 / day
                   </p>
-                  <Accordion items={lotgAccordionItems} />
+                  <Accordion items={lotgAccordionItems} variant="dark" />
                 </div>
               )}
             </FadeInSection>
