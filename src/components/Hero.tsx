@@ -23,8 +23,10 @@ export default function Hero({
     "40vh": "h-[40vh]",
   };
 
+  const needsNavOffset = height !== "full";
+
   return (
-    <section className={`relative ${heightClasses[height]} w-full overflow-hidden`}>
+    <section className={`relative ${heightClasses[height]} w-full overflow-hidden ${needsNavOffset ? "mt-16 md:mt-20" : ""}`}>
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -38,7 +40,7 @@ export default function Hero({
       ) : (
         <div className="absolute inset-0 bg-black/50 z-10" />
       )}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-6 pt-24 md:pt-32">
+      <div className={`relative z-20 flex flex-col items-center justify-center h-full text-center px-6 ${needsNavOffset ? "" : "pt-16 md:pt-20"}`}>
         {children}
       </div>
     </section>
