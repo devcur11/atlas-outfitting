@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import Accordion from "@/components/Accordion";
-import PlaceholderImage from "@/components/PlaceholderImage";
+import Image from "next/image";
 import FadeInSection from "@/components/FadeInSection";
 
 const highlights = [
@@ -432,12 +432,16 @@ export default function MolokaiPage() {
         <section className="bg-sand-light py-12 md:py-20">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                <PlaceholderImage
-                  key={n}
-                  label={`molokai-${n}.jpg`}
-                  aspectRatio="16/9"
-                />
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+                <div key={n} className="aspect-[16/9] relative rounded-lg overflow-hidden">
+                  <Image
+                    src={`/images/molokai-${n}.png`}
+                    alt={`Molokaʻi experience ${n}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                </div>
               ))}
             </div>
           </div>
