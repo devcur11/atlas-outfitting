@@ -95,7 +95,7 @@ export default function HomePage() {
           Guided trips across the best rivers in the West
         </p>
         <Link
-          href="/book"
+          href="/locations"
           className="bg-white text-river rounded-md px-7 py-3.5 font-sans font-semibold tracking-wide hover:bg-cream transition-colors"
         >
           Plan Your Trip
