@@ -6,32 +6,32 @@ const products = [
   {
     name: 'Black AO Cotton Hoodie "Catch it on the Fly"',
     price: "$70",
-    placeholderLabel: "product-hoodie-black.jpg",
+    imageSrc: "/images/product-hoodie-black.png",
     buyHref: "#", /* PLACEHOLDER: Squarespace product URL */
   },
   {
     name: "Anetik TRUCK Sun Hoodie",
     price: "$80",
-    placeholderLabel: "product-anetik-truck.jpg",
+    imageSrc: "/images/product-anetik-truck.png",
     buyHref: "#", /* PLACEHOLDER */
   },
   {
     name: "Anetik LOTG Sun Hoodie",
     price: "$80",
-    placeholderLabel: "product-anetik-lotg.jpg",
+    imageSrc: "/images/product-anetik-lotg.png",
     buyHref: "#", /* PLACEHOLDER */
   },
   {
     name: "Casual OG Logo Cotton Hoodie",
     price: "$45",
     originalPrice: "$50",
-    placeholderLabel: "product-hoodie-og.jpg",
+    imageSrc: "/images/product-hoodie-og.png",
     buyHref: "#", /* PLACEHOLDER */
   },
   {
     name: "Raft Rack Tee",
     price: "$32",
-    placeholderLabel: "product-tee-raft.jpg",
+    imageSrc: "/images/product-tee-raft.png",
     buyHref: "#", /* PLACEHOLDER */
   },
 ];

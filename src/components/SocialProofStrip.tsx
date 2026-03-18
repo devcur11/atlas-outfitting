@@ -15,17 +15,12 @@ export default function SocialProofStrip() {
     <section className="bg-sand-light py-8">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-charcoal">
-          {/* PLACEHOLDER: Replace with real review data */}
           <a href="#" className="flex items-center gap-2 hover:text-copper transition-colors">
-            <Stars /> 5.0 on Google (XX reviews)
+            <Stars /> 5.0 on Google (19 reviews)
           </a>
           <span className="hidden sm:inline text-sage">|</span>
           <a href="#" className="flex items-center gap-2 hover:text-copper transition-colors">
-            <Stars /> 5.0 on FishingBooker (XX reviews)
-          </a>
-          <span className="hidden sm:inline text-sage">|</span>
-          <a href="#" className="flex items-center gap-2 hover:text-copper transition-colors">
-            <Stars /> 5.0 on Yelp (XX reviews)
+            <Stars /> 5.0 on FishingBooker (23 reviews)
           </a>
         </div>
       </div>

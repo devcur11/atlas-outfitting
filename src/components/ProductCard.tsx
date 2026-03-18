@@ -1,10 +1,10 @@
-import PlaceholderImage from "./PlaceholderImage";
+import Image from "next/image";
 
 interface ProductCardProps {
   name: string;
   price: string;
   originalPrice?: string;
-  placeholderLabel?: string;
+  imageSrc: string;
   buyHref: string;
 }
 
@@ -12,16 +12,20 @@ export default function ProductCard({
   name,
   price,
   originalPrice,
-  placeholderLabel,
+  imageSrc,
   buyHref,
 }: ProductCardProps) {
   return (
     <div className="group">
-      <PlaceholderImage
-        label={placeholderLabel || ""}
-        aspectRatio="4/5"
-        className="mb-3 transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-md"
-      />
+      <div className="aspect-[4/5] relative rounded-lg overflow-hidden mb-3 transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-md">
+        <Image
+          src={imageSrc}
+          alt={name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 50vw, 33vw"
+        />
+      </div>
       <h3 className="font-sans font-semibold text-sm text-charcoal mb-1">{name}</h3>
       <div className="flex items-center gap-2 mb-2">
         {originalPrice && (
