@@ -168,12 +168,15 @@ export default function HomePage() {
         <section>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-0.5">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <PlaceholderImage
-                key={n}
-                label={`gallery-${n}.jpg`}
-                aspectRatio="16/9"
-                className="rounded-none"
-              />
+              <div key={n} className="relative aspect-[16/9]">
+                <Image
+                  src={`/images/gallery-${n}.png`}
+                  alt={`Atlas Outfitting gallery ${n}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </div>
             ))}
           </div>
           <div className="bg-cream py-6 text-center">
