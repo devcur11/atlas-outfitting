@@ -25,21 +25,15 @@ export default function Footer() {
   return (
     <footer className="bg-river text-cream">
       <div className="max-w-[1200px] mx-auto px-6 py-12 md:py-20">
-        <div className="mb-10">
-          <Image
-            src="/images/logo.png"
-            alt="Atlas Outfitting"
-            width={160}
-            height={158}
-            className="h-auto w-[120px] md:w-[160px] invert brightness-200"
-          />
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4">
-              Contact
-            </h4>
+            <Image
+              src="/images/logo.png"
+              alt="Atlas Outfitting"
+              width={160}
+              height={158}
+              className="h-12 w-auto invert brightness-200 mb-5"
+            />
             <div className="space-y-2 text-warm-white/80 text-sm">
               <p>
                 <a href="tel:+14062025383" className="hover:text-white transition-colors">

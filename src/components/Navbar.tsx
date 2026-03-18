@@ -58,7 +58,7 @@ export default function Navbar() {
               alt="Atlas Outfitting"
               width={180}
               height={178}
-              className={`h-auto w-[120px] md:w-[150px] transition-all duration-300 ${
+              className={`h-10 md:h-14 w-auto transition-all duration-300 ${
                 isTransparent ? "invert brightness-200" : ""
               }`}
             />

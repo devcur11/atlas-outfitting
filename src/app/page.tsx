@@ -86,7 +86,7 @@ export default function HomePage() {
           alt="Atlas Outfitting"
           width={180}
           height={178}
-          className="h-auto w-28 md:w-36 invert brightness-200 mb-6"
+          className="h-16 md:h-20 w-auto invert brightness-200 mix-blend-screen mb-6"
         />
         <h1 className="font-serif text-[2.5rem] md:text-[4rem] text-white font-bold leading-tight mb-4">
           Western Montana Fly Fishing
