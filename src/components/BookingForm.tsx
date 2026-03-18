@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 
 interface FormData {
-  fullName: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   tripType: string;
@@ -42,7 +43,8 @@ const inputClasses =
 
 export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     tripType: "",
@@ -109,15 +111,47 @@ export default function BookingForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="fullName" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
-          Full Name <span className="text-copper">*</span>
+        <p className="font-sans font-semibold text-sm text-charcoal mb-1.5">
+          Name <span className="text-copper">*</span>
+        </p>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="phone" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+          Phone <span className="text-copper">*</span>
         </label>
         <input
-          type="text"
-          id="fullName"
-          name="fullName"
+          type="tel"
+          id="phone"
+          name="phone"
           required
-          value={formData.fullName}
+          value={formData.phone}
           onChange={handleChange}
           className={inputClasses}
         />
@@ -133,21 +167,6 @@ export default function BookingForm() {
           name="email"
           required
           value={formData.email}
-          onChange={handleChange}
-          className={inputClasses}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="phone" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
-          Phone <span className="text-copper">*</span>
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          value={formData.phone}
           onChange={handleChange}
           className={inputClasses}
         />

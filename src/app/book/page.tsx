@@ -98,19 +98,24 @@ export default function BookPage() {
       {/* Header */}
       <section className="bg-cream pt-28 md:pt-36 pb-8">
         <div className="max-w-[640px] mx-auto px-6 text-center">
-          <h1 className="font-serif font-bold text-[2rem] md:text-[3rem] text-charcoal mb-4">
-            Book a Trip
+          <h1 className="font-serif font-bold text-[2rem] md:text-[3rem] text-charcoal mb-3">
+            Give us a shout!
           </h1>
-          <p className="text-charcoal/70 font-sans mb-4">
-            Fill out the form below and our team will reach out within a few days for
-            confirmation and payment.
-          </p>
           <a
             href="tel:+14062025383"
-            className="text-copper font-sans font-semibold text-xl hover:underline"
+            className="text-charcoal font-sans font-bold text-2xl md:text-3xl hover:text-copper transition-colors block mb-5"
           >
             +1 (406) 202-5383
           </a>
+          <p className="text-charcoal/70 font-sans leading-relaxed">
+            We are thrilled to see you are interested in booking a trip with us!
+            Please fill out the form below and our team will reach out to you within
+            a few days for confirmation and payment.{" "}
+            <span className="underline font-semibold text-charcoal/80">
+              Trips are not considered booked until payment has been received by
+              Atlas Outfitting for the trip.
+            </span>
+          </p>
         </div>
       </section>
 

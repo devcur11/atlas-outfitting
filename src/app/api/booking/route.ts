@@ -4,11 +4,11 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { fullName, email, phone, tripType } = body;
+    const { firstName, lastName, email, phone, tripType } = body;
 
-    if (!fullName || !email || !phone || !tripType) {
+    if (!firstName || !lastName || !email || !phone || !tripType) {
       return NextResponse.json(
-        { message: "Missing required fields: fullName, email, phone, tripType" },
+        { message: "Missing required fields: firstName, lastName, email, phone, tripType" },
         { status: 400 }
       );
     }
