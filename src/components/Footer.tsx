@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {/* PLACEHOLDER: Update with actual social URLs */}
               <a
-                href="https://www.instagram.com/atlasoutfitting/"
+                href="https://www.instagram.com/atlas_outfitting/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-warm-white/80 hover:text-white transition-colors"

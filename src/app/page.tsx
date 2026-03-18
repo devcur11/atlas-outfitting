@@ -181,7 +181,7 @@ export default function HomePage() {
           </div>
           <div className="bg-cream py-6 text-center">
             <a
-              href="https://www.instagram.com/atlasoutfitting/"
+              href="https://www.instagram.com/atlas_outfitting/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
               className="text-copper font-sans font-semibold hover:underline"
