@@ -296,6 +296,26 @@ export default function LocationsPage() {
                       </div>
                     </div>
                   ))}
+
+                  {/* Accommodations */}
+                  <div>
+                    <h4 className="font-sans font-semibold text-sm uppercase tracking-wider text-sage mb-3">
+                      Where to Stay
+                    </h4>
+                    <ul className="space-y-1">
+                      {city.accommodations.map((acc) => (
+                        <li key={acc.name} className="text-charcoal/70 font-sans text-sm">
+                          {acc.name}{" "}
+                          <span className="text-sage">({acc.note})</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Nearby */}
+                  <p className="text-sage font-sans text-sm">
+                    <span className="font-semibold">Also nearby:</span> {city.nearby}
+                  </p>
                 </div>
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                   <Image
@@ -328,26 +348,6 @@ export default function LocationsPage() {
                   <Accordion items={lotgAccordionItems} />
                 </div>
               )}
-
-              {/* Accommodations */}
-              <div className="mb-6">
-                <h4 className="font-sans font-semibold text-sm uppercase tracking-wider text-sage mb-3">
-                  Where to Stay
-                </h4>
-                <ul className="space-y-1">
-                  {city.accommodations.map((acc) => (
-                    <li key={acc.name} className="text-charcoal/70 font-sans text-sm">
-                      {acc.name}{" "}
-                      <span className="text-sage">({acc.note})</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Nearby */}
-              <p className="text-sage font-sans text-sm">
-                <span className="font-semibold">Also nearby:</span> {city.nearby}
-              </p>
             </FadeInSection>
           </div>
         </section>
