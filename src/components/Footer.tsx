@@ -25,8 +25,8 @@ export default function Footer() {
   return (
     <footer className="bg-river text-cream">
       <div className="max-w-[1200px] mx-auto px-6 py-10 md:py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          <div>
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 mb-12">
+          <div className="shrink-0">
             <Image
               src="/images/logo.png"
               alt="Atlas Outfitting"
@@ -53,10 +53,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4">
+            <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4 text-center">
               Quick Links
             </h4>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -86,7 +86,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:max-w-[260px]">
             <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4">
               Newsletter
             </h4>
