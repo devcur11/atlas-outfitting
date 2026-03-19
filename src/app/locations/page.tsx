@@ -2,7 +2,6 @@ import Image from "next/image";
 import Hero from "@/components/Hero";
 import LocationSelector from "@/components/LocationSelector";
 import Accordion from "@/components/Accordion";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import FadeInSection from "@/components/FadeInSection";
 
 interface River {
@@ -305,6 +304,81 @@ export default function LocationsPage() {
         </p>
       </Hero>
 
+      {/* Trip Types Explainer */}
+      <FadeInSection>
+        <section className="bg-cream py-12 md:py-20">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="font-serif font-bold text-[1.75rem] md:text-[2.5rem] text-charcoal text-center mb-12">
+              Two Ways to Fish
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Float Trip */}
+              <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/images/trip-float.png"
+                    alt="Float trip on a drift boat"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
+                    Float Trip
+                  </h3>
+                  <p className="text-charcoal/70 font-sans leading-relaxed mb-4">
+                    The most popular guided fly fishing trip in Montana. Done from a
+                    drift boat or raft. Your guide rows while you fish.
+                  </p>
+                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans">
+                    <li>• Cover more water</li>
+                    <li>• Long drifts, fewer tangles</li>
+                    <li>• Handicap accessible</li>
+                    <li>• 1-2 anglers per boat</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Walk & Wade */}
+              <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/images/trip-wade.png"
+                    alt="Walk and wade fly fishing"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
+                    Walk &amp; Wade
+                  </h3>
+                  <p className="text-charcoal/70 font-sans leading-relaxed mb-4">
+                    Traditional on-foot fly fishing. Access wade-only sections with less
+                    fishing pressure.
+                  </p>
+                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans">
+                    <li>• Up to 3 anglers</li>
+                    <li>• Wade-only sections, fewer people</li>
+                    <li>• Less pressured trout</li>
+                    <li>• More intimate experience</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Choose Your Region */}
+      <div className="bg-cream pb-4 pt-0">
+        <p className="font-sans text-sm font-semibold text-sage uppercase tracking-wider text-center">
+          Choose Your Region
+        </p>
+      </div>
+
       {/* Location Selector */}
       <LocationSelector />
 
@@ -403,70 +477,6 @@ export default function LocationsPage() {
           </div>
         </section>
       ))}
-
-      {/* Trip Types Explainer */}
-      <FadeInSection>
-        <section className="bg-cream py-12 md:py-20">
-          <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="font-serif font-bold text-[1.75rem] md:text-[2.5rem] text-charcoal text-center mb-12">
-              Choosing Your Trip Type
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Float Trip */}
-              <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
-                <div className="relative aspect-[16/9]">
-                  <Image
-                    src="/images/trip-float.png" /* Reuse: trip-type-float → trip-float */
-                    alt="Float trip on a drift boat"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
-                    Float Trip
-                  </h3>
-                  <p className="text-charcoal/70 font-sans leading-relaxed mb-4">
-                    The most popular guided fly fishing trip in Montana. Done from a
-                    drift boat or raft. Your guide rows while you fish.
-                  </p>
-                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans">
-                    <li>• Cover more water</li>
-                    <li>• Long drifts, fewer tangles</li>
-                    <li>• Handicap accessible</li>
-                    <li>• 1-2 anglers per boat</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Walk & Wade */}
-              <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
-                <PlaceholderImage
-                  label="trip-type-wade.jpg"
-                  aspectRatio="16/9"
-                  className="rounded-none"
-                />
-                <div className="p-6">
-                  <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
-                    Walk &amp; Wade
-                  </h3>
-                  <p className="text-charcoal/70 font-sans leading-relaxed mb-4">
-                    Traditional on-foot fly fishing. Access wade-only sections with less
-                    fishing pressure.
-                  </p>
-                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans">
-                    <li>• Up to 3 anglers</li>
-                    <li>• Wade-only sections, fewer people</li>
-                    <li>• Less pressured trout</li>
-                    <li>• More intimate experience</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </FadeInSection>
 
       {/* Ridgeline Aviation */}
       <FadeInSection>

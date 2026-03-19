@@ -29,7 +29,7 @@ export default function TripCard({
               alt={title}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         ) : (

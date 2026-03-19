@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import TripCard from "@/components/TripCard";
 import SocialProofStrip from "@/components/SocialProofStrip";
 import TestimonialCard from "@/components/TestimonialCard";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import FadeInSection from "@/components/FadeInSection";
 import { ChevronDown } from "lucide-react";
 
@@ -24,14 +23,6 @@ const trips = [
       "Trophy trout in the Gates of the Mountains. Jet boat access only.",
     price: "$850 / day",
     href: "/locations#land-of-the-giants",
-  },
-  {
-    imageSrc: "/images/hero-molokai.png", // Reuse: trip-molokai → hero-molokai
-    title: "Moloka\u02BBi, Hawai\u02BBi",
-    description:
-      "Axis deer hunting and bonefish on the fly from our Hawaiian lodge.",
-    price: "Starting at $5,500",
-    href: "/molokai",
   },
 ];
 
@@ -112,10 +103,47 @@ export default function HomePage() {
             <h2 className="font-serif font-bold text-[1.75rem] md:text-[2.5rem] text-charcoal text-center mb-12">
               What We Offer
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {trips.map((trip) => (
                 <TripCard key={trip.title} {...trip} />
               ))}
+            </div>
+
+            {/* Molokai Banner */}
+            <div className="mt-12 pt-12 border-t border-sand">
+              <p className="text-copper font-sans text-sm font-semibold uppercase tracking-wider mb-4">
+                Annual Expedition
+              </p>
+              <Link href="/molokai" className="group block">
+                <div className="bg-river rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 transition-all duration-200 group-hover:shadow-md">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src="/images/hero-molokai.png"
+                      alt="Moloka'i, Hawai'i"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col justify-center">
+                    <h3 className="font-serif font-bold text-xl md:text-2xl text-cream mb-2">
+                      Moloka&#x02BB;i, Hawai&#x02BB;i
+                    </h3>
+                    <p className="text-cream/80 font-sans text-sm mb-2">
+                      Axis deer hunting and bonefish on the fly from our Hawaiian lodge.
+                    </p>
+                    <p className="text-cream/60 font-sans text-sm mb-4">
+                      5-week season, January–February | Groups of 2–4
+                    </p>
+                    <p className="text-copper-light font-sans font-semibold text-sm mb-2">
+                      Starting at $5,500
+                    </p>
+                    <span className="text-copper-light text-sm font-sans group-hover:underline inline-block">
+                      Learn More →
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
