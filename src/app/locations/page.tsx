@@ -311,9 +311,9 @@ export default function LocationsPage() {
         <section className="bg-cream py-12 md:py-20">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="font-serif font-bold text-[1.75rem] md:text-[2.5rem] text-charcoal text-center mb-12">
-              Two Ways to Fish
+              Three Ways to Fish
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Float Trip */}
               <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
                 <div className="relative aspect-[16/9]">
@@ -367,6 +367,47 @@ export default function LocationsPage() {
                     <li>• Less pressured trout</li>
                     <li>• More intimate experience</li>
                   </ul>
+                </div>
+              </div>
+
+              {/* Jet Boat */}
+              <div className="bg-warm-white rounded-lg overflow-hidden border border-sand relative">
+                <span className="absolute top-3 right-3 z-10 bg-copper text-cream text-xs font-sans font-semibold px-3 py-1 rounded-full">
+                  Signature Experience
+                </span>
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src="/images/trip-jetboat.png"
+                    alt="Jet boat fly fishing in the Gates of the Mountains"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif font-bold text-xl text-charcoal mb-1">
+                    Jet Boat
+                  </h3>
+                  <p className="text-sage font-sans text-xs mb-2">
+                    Helena | Gates of the Mountains
+                  </p>
+                  <p className="text-charcoal/70 font-sans leading-relaxed mb-4">
+                    Trophy trout averaging 20 inches in a limestone canyon accessible
+                    only by jet boat. One of the few places in the lower 48 that
+                    requires it.
+                  </p>
+                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans mb-4">
+                    <li>• Trophy trout (20&quot;+ average)</li>
+                    <li>• Jet boat access only</li>
+                    <li>• Helena region exclusively</li>
+                    <li>• April through October season</li>
+                  </ul>
+                  <a
+                    href="#land-of-the-giants"
+                    className="inline-block bg-copper text-cream font-sans font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-copper-light transition-colors"
+                  >
+                    Learn More →
+                  </a>
                 </div>
               </div>
             </div>
