@@ -57,16 +57,28 @@ export default function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
+  const isMolokai = formData.tripType === "Moloka\u02BBi, Hawai\u02BBi (starting at $5,500)";
+
   const showLocationField = [
     "Float & Wade ($750/day)",
     "Land of the Giants — Jet Boat ($850/day)",
   ].includes(formData.tripType);
+
+  const filteredGroupSizes = isMolokai
+    ? []
+    : groupSizes.filter((s) => s !== "Moloka\u02BBi group (2-4)");
 
   useEffect(() => {
     if (!showLocationField) {
       setFormData((prev) => ({ ...prev, preferredLocation: "" }));
     }
   }, [showLocationField]);
+
+  useEffect(() => {
+    if (isMolokai) {
+      setFormData((prev) => ({ ...prev, groupSize: "" }));
+    }
+  }, [isMolokai]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -230,25 +242,27 @@ export default function BookingForm() {
         />
       </div>
 
-      <div>
-        <label htmlFor="groupSize" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
-          Group Size
-        </label>
-        <select
-          id="groupSize"
-          name="groupSize"
-          value={formData.groupSize}
-          onChange={handleChange}
-          className={inputClasses}
-        >
-          <option value="">Select group size</option>
-          {groupSizes.map((size) => (
-            <option key={size} value={size}>
-              {size}
-            </option>
-          ))}
-        </select>
-      </div>
+      {!isMolokai && (
+        <div>
+          <label htmlFor="groupSize" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+            Group Size
+          </label>
+          <select
+            id="groupSize"
+            name="groupSize"
+            value={formData.groupSize}
+            onChange={handleChange}
+            className={inputClasses}
+          >
+            <option value="">Select group size</option>
+            {filteredGroupSizes.map((size) => (
+              <option key={size} value={size}>
+                {size}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div>
         <label htmlFor="experienceLevel" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
