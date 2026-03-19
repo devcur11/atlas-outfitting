@@ -52,7 +52,7 @@ const huntingExperienceLevels = [
 
 const inputClasses =
   "w-full px-4 py-3 rounded-md border border-sand bg-warm-white text-charcoal font-sans focus:outline-none focus:ring-2 focus:ring-river focus:border-transparent";
-const selectClasses = `${inputClasses} pr-10`;
+const selectClasses = `${inputClasses} pr-10 appearance-none bg-[length:16px_16px] bg-[position:right_12px_center] bg-no-repeat bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%236B7B75'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M6%209l6%206%206-6'/%3E%3C/svg%3E")]`;
 
 export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>({
