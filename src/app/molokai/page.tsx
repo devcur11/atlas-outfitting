@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Accordion from "@/components/Accordion";
 import Image from "next/image";
 import FadeInSection from "@/components/FadeInSection";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const highlights = [
   "5-Star Chef — 3 Meals/Day",
@@ -258,6 +259,7 @@ function AvailabilityDot({ status }: { status: string }) {
 export default function MolokaiPage() {
   return (
     <>
+      <ScrollToTop />
       {/* Hero */}
       <Hero
         imageSrc="/images/hero-molokai.png"

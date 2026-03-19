@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import LocationSelector from "@/components/LocationSelector";
 import Accordion from "@/components/Accordion";
 import FadeInSection from "@/components/FadeInSection";
+import ScrollToTop from "@/components/ScrollToTop";
 
 interface River {
   name: string;
@@ -289,6 +290,7 @@ const lotgAccordionItems = [
 export default function LocationsPage() {
   return (
     <>
+      <ScrollToTop />
       {/* Hero */}
       <Hero
         imageSrc="/images/hero-locations.png"
