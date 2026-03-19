@@ -299,7 +299,7 @@ export default function LocationsPage() {
         overlay="gradient"
       >
         <h1 className="font-serif text-[2.5rem] md:text-[4rem] text-white font-bold leading-tight mb-4">
-          Where to Fish in Western Montana
+          Fishing in Western Montana
         </h1>
         <p className="font-sans text-lg text-white/80 max-w-2xl">
           Five regions, dozens of rivers, one guide service that covers them all.
