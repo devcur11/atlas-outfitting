@@ -50,6 +50,6 @@ body {
 }
 
 /* Scroll margin for anchor links under fixed nav + sticky tabs */
-[id] {
+#bozeman, #helena, #dillon, #missoula, #whitefish, #land-of-the-giants {
   scroll-margin-top: 160px;
 }

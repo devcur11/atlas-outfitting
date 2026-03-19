@@ -266,7 +266,7 @@ export default function MolokaiPage() {
         overlay="gradient"
       >
         <h1 className="font-serif text-[2.5rem] md:text-[4rem] text-white font-bold leading-tight mb-4">
-          Hunt &amp; Fish Moloka&#x02BB;i, Hawai&#x02BB;i
+          Hunt &amp; Fishing Expedition
         </h1>
         <p className="font-sans text-lg text-white/80 mb-8 max-w-2xl">
           Axis deer. Bonefish on the fly. Five-star chef. One unforgettable week.
