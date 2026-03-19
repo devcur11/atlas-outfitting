@@ -118,13 +118,13 @@ export default function Footer() {
             Reviews
           </h4>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-warm-white/80">
-            <a href="#" className="flex items-center gap-2 hover:text-white transition-colors">
+            <span className="flex items-center gap-2">
               <Stars /> 5.0 on Google (19 reviews)
-            </a>
+            </span>
             <span className="hidden sm:inline text-warm-white/30">|</span>
-            <a href="#" className="flex items-center gap-2 hover:text-white transition-colors">
+            <span className="flex items-center gap-2">
               <Stars /> 5.0 on FishingBooker (23 reviews)
-            </a>
+            </span>
           </div>
         </div>
 
