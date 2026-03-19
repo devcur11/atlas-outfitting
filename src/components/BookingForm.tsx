@@ -13,6 +13,8 @@ interface FormData {
   groupSize: string;
   molokaiAdventure: string;
   experienceLevel: string;
+  fishingExperienceLevel: string;
+  huntingExperienceLevel: string;
   additionalNotes: string;
 }
 
@@ -34,8 +36,15 @@ const groupSizes = [
 
 const molokaiAdventures = ["Fish", "Hunt", "Combo"];
 
-const experienceLevels = [
+const fishingExperienceLevels = [
   "Never fly fished before",
+  "Beginner",
+  "Intermediate",
+  "Experienced",
+];
+
+const huntingExperienceLevels = [
+  "Never hunted before",
   "Beginner",
   "Intermediate",
   "Experienced",
@@ -43,7 +52,7 @@ const experienceLevels = [
 
 const inputClasses =
   "w-full px-4 py-3 rounded-md border border-sand bg-warm-white text-charcoal font-sans focus:outline-none focus:ring-2 focus:ring-river focus:border-transparent";
-const selectClasses = `${inputClasses} pr-8`;
+const selectClasses = `${inputClasses} pr-10`;
 
 export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -57,6 +66,8 @@ export default function BookingForm() {
     groupSize: "",
     molokaiAdventure: "",
     experienceLevel: "",
+    fishingExperienceLevel: "",
+    huntingExperienceLevel: "",
     additionalNotes: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,6 +97,15 @@ export default function BookingForm() {
       setFormData((prev) => ({ ...prev, molokaiAdventure: "" }));
     }
   }, [isMolokai]);
+
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      experienceLevel: "",
+      fishingExperienceLevel: "",
+      huntingExperienceLevel: "",
+    }));
+  }, [formData.molokaiAdventure]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -291,25 +311,68 @@ export default function BookingForm() {
         </div>
       )}
 
-      <div>
-        <label htmlFor="experienceLevel" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
-          Experience Level
-        </label>
-        <select
-          id="experienceLevel"
-          name="experienceLevel"
-          value={formData.experienceLevel}
-          onChange={handleChange}
-          className={selectClasses}
-        >
-          <option value="">Select experience level</option>
-          {experienceLevels.map((level) => (
-            <option key={level} value={level}>
-              {level}
-            </option>
-          ))}
-        </select>
-      </div>
+      {formData.molokaiAdventure === "Combo" ? (
+        <>
+          <div>
+            <label htmlFor="fishingExperienceLevel" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+              Fishing Experience Level
+            </label>
+            <select
+              id="fishingExperienceLevel"
+              name="fishingExperienceLevel"
+              value={formData.fishingExperienceLevel}
+              onChange={handleChange}
+              className={selectClasses}
+            >
+              <option value="">Select experience level</option>
+              {fishingExperienceLevels.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="huntingExperienceLevel" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+              Hunting Experience Level
+            </label>
+            <select
+              id="huntingExperienceLevel"
+              name="huntingExperienceLevel"
+              value={formData.huntingExperienceLevel}
+              onChange={handleChange}
+              className={selectClasses}
+            >
+              <option value="">Select experience level</option>
+              {huntingExperienceLevels.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+          </div>
+        </>
+      ) : (
+        <div>
+          <label htmlFor="experienceLevel" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+            Experience Level
+          </label>
+          <select
+            id="experienceLevel"
+            name="experienceLevel"
+            value={formData.experienceLevel}
+            onChange={handleChange}
+            className={selectClasses}
+          >
+            <option value="">Select experience level</option>
+            {(formData.molokaiAdventure === "Hunt" ? huntingExperienceLevels : fishingExperienceLevels).map((level) => (
+              <option key={level} value={level}>
+                {level}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div>
         <label htmlFor="additionalNotes" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
