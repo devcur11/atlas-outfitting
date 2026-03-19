@@ -43,6 +43,7 @@ const experienceLevels = [
 
 const inputClasses =
   "w-full px-4 py-3 rounded-md border border-sand bg-warm-white text-charcoal font-sans focus:outline-none focus:ring-2 focus:ring-river focus:border-transparent";
+const selectClasses = `${inputClasses} pr-8`;
 
 export default function BookingForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -200,7 +201,7 @@ export default function BookingForm() {
           required
           value={formData.tripType}
           onChange={handleChange}
-          className={inputClasses}
+          className={selectClasses}
         >
           <option value="">Select a trip type</option>
           {tripTypes.map((type) => (
@@ -221,7 +222,7 @@ export default function BookingForm() {
             name="preferredLocation"
             value={formData.preferredLocation}
             onChange={handleChange}
-            className={inputClasses}
+            className={selectClasses}
           >
             <option value="">Select a location</option>
             {locations.map((loc) => (
@@ -258,7 +259,7 @@ export default function BookingForm() {
             name="molokaiAdventure"
             value={formData.molokaiAdventure}
             onChange={handleChange}
-            className={inputClasses}
+            className={selectClasses}
           >
             <option value="">Select an option</option>
             {molokaiAdventures.map((adventure) => (
@@ -278,7 +279,7 @@ export default function BookingForm() {
             name="groupSize"
             value={formData.groupSize}
             onChange={handleChange}
-            className={inputClasses}
+            className={selectClasses}
           >
             <option value="">Select group size</option>
             {filteredGroupSizes.map((size) => (
@@ -299,7 +300,7 @@ export default function BookingForm() {
           name="experienceLevel"
           value={formData.experienceLevel}
           onChange={handleChange}
-          className={inputClasses}
+          className={selectClasses}
         >
           <option value="">Select experience level</option>
           {experienceLevels.map((level) => (
