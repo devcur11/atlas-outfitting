@@ -11,6 +11,7 @@ interface FormData {
   preferredLocation: string;
   preferredDates: string;
   groupSize: string;
+  molokaiAdventure: string;
   experienceLevel: string;
   additionalNotes: string;
 }
@@ -30,6 +31,8 @@ const groupSizes = [
   "3+ (multiple boats)",
   "Moloka\u02BBi group (2-4)",
 ];
+
+const molokaiAdventures = ["Fish", "Hunt", "Combo"];
 
 const experienceLevels = [
   "Never fly fished before",
@@ -51,6 +54,7 @@ export default function BookingForm() {
     preferredLocation: "",
     preferredDates: "",
     groupSize: "",
+    molokaiAdventure: "",
     experienceLevel: "",
     additionalNotes: "",
   });
@@ -77,6 +81,8 @@ export default function BookingForm() {
   useEffect(() => {
     if (isMolokai) {
       setFormData((prev) => ({ ...prev, groupSize: "" }));
+    } else {
+      setFormData((prev) => ({ ...prev, molokaiAdventure: "" }));
     }
   }, [isMolokai]);
 
@@ -242,7 +248,27 @@ export default function BookingForm() {
         />
       </div>
 
-      {!isMolokai && (
+      {isMolokai ? (
+        <div>
+          <label htmlFor="molokaiAdventure" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
+            Choose Your Adventure
+          </label>
+          <select
+            id="molokaiAdventure"
+            name="molokaiAdventure"
+            value={formData.molokaiAdventure}
+            onChange={handleChange}
+            className={inputClasses}
+          >
+            <option value="">Select an option</option>
+            {molokaiAdventures.map((adventure) => (
+              <option key={adventure} value={adventure}>
+                {adventure}
+              </option>
+            ))}
+          </select>
+        </div>
+      ) : (
         <div>
           <label htmlFor="groupSize" className="block font-sans font-semibold text-sm text-charcoal mb-1.5">
             Group Size
