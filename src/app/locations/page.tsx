@@ -385,9 +385,17 @@ export default function LocationsPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif font-bold text-xl text-charcoal mb-1">
-                    Jet Boat
-                  </h3>
+                  <div className="flex items-start justify-between mb-1">
+                    <h3 className="font-serif font-bold text-xl text-charcoal">
+                      Jet Boat
+                    </h3>
+                    <a
+                      href="#land-of-the-giants"
+                      className="inline-block bg-copper text-cream font-sans font-semibold text-sm px-4 py-1.5 rounded-md hover:bg-copper-light transition-colors shrink-0 ml-3"
+                    >
+                      Learn More →
+                    </a>
+                  </div>
                   <p className="text-sage font-sans text-xs mb-2">
                     Helena | Gates of the Mountains
                   </p>
@@ -396,18 +404,12 @@ export default function LocationsPage() {
                     only by jet boat. One of the few places in the lower 48 that
                     requires it.
                   </p>
-                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans mb-4">
+                  <ul className="space-y-1 text-sm text-charcoal/70 font-sans">
                     <li>• Trophy trout (20&quot;+ average)</li>
                     <li>• Jet boat access only</li>
                     <li>• Helena region exclusively</li>
                     <li>• April through October season</li>
                   </ul>
-                  <a
-                    href="#land-of-the-giants"
-                    className="inline-block bg-copper text-cream font-sans font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-copper-light transition-colors"
-                  >
-                    Learn More →
-                  </a>
                 </div>
               </div>
             </div>
