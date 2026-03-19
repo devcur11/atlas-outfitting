@@ -13,7 +13,7 @@ const quickLinks = [
 
 function Stars() {
   return (
-    <span className="inline-flex gap-0.5 text-copper">
+    <span className="inline-flex space-x-0.5 text-copper">
       {[...Array(5)].map((_, i) => (
         <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
       ))}
@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="bg-river text-cream">
       <div className="max-w-[1200px] mx-auto px-6 py-10 md:py-14">
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 mb-12">
+        <div className="flex flex-col lg:flex-row lg:justify-between space-y-10 lg:space-y-0 mb-12">
           <div className="shrink-0">
             <Image
               src="/images/logo.png"
@@ -73,7 +73,7 @@ export default function Footer() {
             <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4">
               Follow Us
             </h4>
-            <div className="flex gap-4">
+            <div className="flex space-x-4">
               {/* PLACEHOLDER: Update with actual social URLs */}
               <a
                 href="https://www.instagram.com/atlas_outfitting/?hl=en"
@@ -96,7 +96,7 @@ export default function Footer() {
             {/* PLACEHOLDER: Newsletter form — no integration yet */}
             <form
               action="#"
-              className="flex gap-2"
+              className="flex space-x-2"
             >
               <input
                 type="email"
@@ -117,12 +117,12 @@ export default function Footer() {
           <h4 className="font-sans font-semibold text-sm tracking-wider uppercase mb-4 text-center">
             Reviews
           </h4>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-warm-white/80">
-            <span className="flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-warm-white/80">
+            <span className="flex items-center space-x-2">
               <Stars /> 5.0 on Google (19 reviews)
             </span>
             <span className="hidden sm:inline text-warm-white/30">|</span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center space-x-2">
               <Stars /> 5.0 on FishingBooker (23 reviews)
             </span>
           </div>

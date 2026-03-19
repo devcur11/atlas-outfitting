@@ -77,12 +77,12 @@ const detailAccordionItems = [
           Molokai (MKK). Arrive and depart as early as possible (Sunday arrival,
           Saturday departure).
         </p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap -mt-3 -ml-3">
           <a
             href="https://www.mokuleleairlines.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-copper hover:underline text-sm"
+            className="text-copper hover:underline text-sm mt-3 ml-3"
           >
             Mokulele Airlines →
           </a>
@@ -90,7 +90,7 @@ const detailAccordionItems = [
             href="https://www.hawaii-aloha.com/blog/flying-to-molokai-heres-how-to-get-there/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-copper hover:underline text-sm"
+            className="text-copper hover:underline text-sm mt-3 ml-3"
           >
             Travel Tips →
           </a>
@@ -435,7 +435,7 @@ export default function MolokaiPage() {
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
-                <div key={n} className="aspect-[16/9] relative rounded-lg overflow-hidden">
+                <div key={n} className="pb-[56.25%] relative rounded-lg overflow-hidden">
                   <Image
                     src={`/images/molokai-${n}.png`}
                     alt={`Molokaʻi experience ${n}`}

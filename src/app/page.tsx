@@ -116,7 +116,7 @@ export default function HomePage() {
               </p>
               <Link href="/molokai" className="group block">
                 <div className="bg-river rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 transition-all duration-200 group-hover:shadow-md">
-                  <div className="relative aspect-[16/9]">
+                  <div className="relative pb-[56.25%]">
                     <Image
                       src="/images/hero-molokai.png"
                       alt="Moloka'i, Hawai'i"
@@ -196,7 +196,7 @@ export default function HomePage() {
         <section>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-0.5">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="relative aspect-[16/9]">
+              <div key={n} className="relative pb-[56.25%]">
                 <Image
                   src={`/images/gallery-${n}.png`}
                   alt={`Atlas Outfitting gallery ${n}`}

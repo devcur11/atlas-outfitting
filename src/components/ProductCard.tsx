@@ -17,7 +17,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <div className="group">
-      <div className="aspect-[4/5] relative rounded-lg overflow-hidden mb-3 transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-md">
+      <div className="pb-[125%] relative rounded-lg overflow-hidden mb-3 transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-md">
         <Image
           src={imageSrc}
           alt={name}
@@ -27,7 +27,7 @@ export default function ProductCard({
         />
       </div>
       <h3 className="font-sans font-semibold text-sm text-charcoal mb-1">{name}</h3>
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex items-center space-x-2 mb-2">
         {originalPrice && (
           <span className="text-sage text-sm line-through">{originalPrice}</span>
         )}

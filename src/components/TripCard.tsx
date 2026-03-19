@@ -23,7 +23,7 @@ export default function TripCard({
     <Link href={href} className="group block">
       <div className="rounded-lg overflow-hidden transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-md">
         {imageSrc ? (
-          <div className="relative aspect-[16/9]">
+          <div className="relative pb-[56.25%]">
             <Image
               src={imageSrc}
               alt={title}

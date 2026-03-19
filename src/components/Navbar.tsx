@@ -64,7 +64,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -112,7 +112,7 @@ export default function Navbar() {
                 <X size={24} />
               </button>
             </div>
-            <div className="flex flex-col gap-1 px-6 flex-1">
+            <div className="flex flex-col space-y-1 px-6 flex-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

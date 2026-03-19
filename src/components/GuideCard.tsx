@@ -21,7 +21,7 @@ export default function GuideCard({
   return (
     <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
       {imageSrc ? (
-        <div className="relative aspect-[3/4]">
+        <div className="relative pb-[133.333%]">
           <Image
             src={imageSrc}
             alt={name}
@@ -41,11 +41,11 @@ export default function GuideCard({
         <h3 className="font-serif font-bold text-xl text-charcoal">{name}</h3>
         <p className="text-sage text-sm mb-3">{location}</p>
         <p className="text-charcoal/80 font-sans text-sm leading-relaxed mb-4">{bio}</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap -mt-2 -ml-2">
           {rivers.map((river) => (
             <span
               key={river}
-              className="bg-sand-light text-charcoal text-xs px-3 py-1 rounded-full font-sans"
+              className="bg-sand-light text-charcoal text-xs px-3 py-1 rounded-full font-sans mt-2 ml-2"
             >
               {river}
             </span>

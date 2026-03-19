@@ -316,7 +316,7 @@ export default function LocationsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Float & Wade */}
               <div className="bg-warm-white rounded-lg overflow-hidden border border-sand">
-                <div className="relative aspect-[16/9]">
+                <div className="relative pb-[56.25%]">
                   <Image
                     src="/images/trip-float.png"
                     alt="Float and wade fly fishing in Montana"
@@ -348,7 +348,7 @@ export default function LocationsPage() {
                 <span className="absolute top-3 right-3 z-10 bg-copper text-cream text-xs font-sans font-semibold px-3 py-1 rounded-full">
                   Signature Experience
                 </span>
-                <div className="relative aspect-[16/9]">
+                <div className="relative pb-[56.25%]">
                   <Image
                     src="/images/trip-jetboat.png"
                     alt="Jet boat fly fishing in the Gates of the Mountains"
@@ -422,14 +422,14 @@ export default function LocationsPage() {
                       <p className="text-charcoal/70 font-sans leading-relaxed mb-3">
                         {river.description}
                       </p>
-                      <div className="flex flex-wrap gap-2 mb-2">
-                        <span className="bg-sand text-charcoal text-xs px-3 py-1 rounded-full font-sans font-semibold">
+                      <div className="flex flex-wrap -mt-2 -ml-2 mb-2">
+                        <span className="bg-sand text-charcoal text-xs px-3 py-1 rounded-full font-sans font-semibold mt-2 ml-2">
                           Best: {river.bestSeason}
                         </span>
                         {river.techniques.map((tech) => (
                           <span
                             key={tech}
-                            className="bg-copper-light/20 text-copper text-xs px-3 py-1 rounded-full font-sans"
+                            className="bg-copper-light/20 text-copper text-xs px-3 py-1 rounded-full font-sans mt-2 ml-2"
                           >
                             {tech}
                           </span>
@@ -458,7 +458,7 @@ export default function LocationsPage() {
                     <span className="font-semibold">Also nearby:</span> {city.nearby}
                   </p>
                 </div>
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                <div className="relative pb-[75%] rounded-lg overflow-hidden">
                   <Image
                     src={city.imageSrc}
                     alt={`${city.name} fishing`}
@@ -519,7 +519,7 @@ export default function LocationsPage() {
                   Learn More at Ridgeline Aviation →
                 </a>
               </div>
-              <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+              <div className="relative pb-[56.25%] rounded-lg overflow-hidden">
                 <Image
                   src="/images/ridgeline-plane.png"
                   alt="Ridgeline Aviation Pilatus PC-12 charter plane"

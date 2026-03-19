@@ -38,7 +38,7 @@ export default function LocationSelector() {
 
   return (
     <div className="sticky top-16 md:top-20 z-40 bg-cream border-b border-sand">
-      <div className="max-w-[1200px] mx-auto px-6 flex gap-1 md:gap-6 overflow-x-auto scrollbar-hide">
+      <div className="max-w-[1200px] mx-auto px-6 flex space-x-1 md:space-x-6 overflow-x-auto scrollbar-hide">
         {cities.map((city) => (
           <button
             key={city}

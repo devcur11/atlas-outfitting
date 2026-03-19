@@ -12,18 +12,20 @@ export default function PlaceholderImage({
   className = "",
 }: PlaceholderImageProps) {
   const aspectClasses: Record<string, string> = {
-    "16/9": "aspect-[16/9]",
-    "3/4": "aspect-[3/4]",
-    "1/1": "aspect-square",
-    "4/5": "aspect-[4/5]",
+    "16/9": "pb-[56.25%]",
+    "3/4": "pb-[133.333%]",
+    "1/1": "pb-[100%]",
+    "4/5": "pb-[125%]",
   };
 
   return (
     <div
-      className={`bg-sand rounded-lg flex flex-col items-center justify-center ${aspectClasses[aspectRatio]} ${className}`}
+      className={`relative bg-sand rounded-lg ${aspectClasses[aspectRatio]} ${className}`}
     >
-      <Mountain className="text-sage" size={32} />
-      <span className="text-sage text-xs font-mono mt-2">{label}</span>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <Mountain className="text-sage" size={32} />
+        <span className="text-sage text-xs font-mono mt-2">{label}</span>
+      </div>
     </div>
   );
 }

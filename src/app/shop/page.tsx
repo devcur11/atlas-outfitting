@@ -61,7 +61,7 @@ export default function ShopPage() {
             <h2 className="font-serif font-bold text-xl md:text-2xl text-charcoal mb-6">
               Give the gift of a lifetime on the water.
             </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href="#" /* PLACEHOLDER: Squarespace gift card URL */
                 className="bg-river text-white rounded-md px-7 py-3 font-sans font-semibold text-sm tracking-wide hover:bg-river-dark transition-colors"
