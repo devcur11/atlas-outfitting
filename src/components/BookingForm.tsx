@@ -75,6 +75,8 @@ export default function BookingForm() {
 
   const isMolokai = formData.tripType === "Moloka\u02BBi, Hawai\u02BBi (starting at $5,500)";
 
+  const isJetBoat = formData.tripType === "Land of the Giants — Jet Boat ($850/day)";
+
   const showLocationField = [
     "Float & Wade ($750/day)",
     "Land of the Giants — Jet Boat ($850/day)",
@@ -87,8 +89,10 @@ export default function BookingForm() {
   useEffect(() => {
     if (!showLocationField) {
       setFormData((prev) => ({ ...prev, preferredLocation: "" }));
+    } else if (isJetBoat) {
+      setFormData((prev) => ({ ...prev, preferredLocation: "Helena" }));
     }
-  }, [showLocationField]);
+  }, [showLocationField, isJetBoat]);
 
   useEffect(() => {
     if (isMolokai) {
@@ -242,7 +246,8 @@ export default function BookingForm() {
             name="preferredLocation"
             value={formData.preferredLocation}
             onChange={handleChange}
-            className={selectClasses}
+            disabled={isJetBoat}
+            className={`${selectClasses} ${isJetBoat ? "opacity-60 cursor-not-allowed" : ""}`}
           >
             <option value="">Select a location</option>
             {locations.map((loc) => (
